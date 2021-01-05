@@ -24,6 +24,8 @@ Build an asynchronized data integration with Spring Boot, Kafka and a database
         "lastname": "lastname"
   }
   ```
-  3. Since this is a simple task, there is no feedback from the consumer if such client already exists in the db, and it is the consumer responsibility to check if exists. If exists will update the records, otherwise will create a new Address and Client records.
+  3. There is no feedback from the consumer to the producer if such client already exists in the db, and it is the consumer responsibility to check if exists. If exists will update the records, otherwise will create a new Address and Client records.
+  
+  To implement such a feedback, using a framework for DDD with CQRS, such as Axon, and Kafka as the event store, would have provided a better stack.
 
 ### Consumer
