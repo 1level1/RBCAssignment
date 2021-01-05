@@ -1,0 +1,27 @@
+{
+  "name": "Client",
+  "namespace": "com.example",
+  "type": "record",
+  "fields" : [
+    {
+      "name": "address",
+      "type": "Address"
+    },
+    {
+      "name": "id",
+      "type": "string"
+    },
+    {
+      "name": "firstname",
+      "type": "string"
+    },
+    {
+      "name": "networth",
+      "type": "double"
+    },
+    {
+      "name": "lastname",
+      "type": "string"
+    }
+  ]
+}

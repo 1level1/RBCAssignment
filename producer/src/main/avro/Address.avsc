@@ -1,0 +1,23 @@
+{
+  "name": "Address",
+  "namespace": "com.example",
+  "type": "record",
+  "fields" : [
+    {
+      "name": "addressline",
+      "type": "string"
+    },
+    {
+      "name": "city",
+      "type": "string"
+    },
+    {
+      "name": "state",
+      "type": "string"
+    },
+    {
+      "name": "postcode",
+      "type": "string"
+    }
+  ]
+}
