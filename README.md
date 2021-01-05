@@ -5,6 +5,10 @@ Build an asynchronized data integration with Spring Boot, Kafka and a database
 1. docker
 2. docker-compose
 
+## Asumptions:
+  1. The Address to Client is a one to many relation. Meaning one address can have several clients, but every client has only one address.
+  2. When editing a user, will create a new user and address if does not exists.
+
 ## Usage
 ### Producer
 1. The producer has 2 API`s:
