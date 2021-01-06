@@ -17,12 +17,12 @@ public class ClientController {
     }
 
     @PostMapping("/add-new-client")
-    Client newClient(@RequestBody ClientMsg newClient) {
-        return clientService.sndClientMsg(newClient);
+    String newClient(@RequestBody ClientMsg newClient) {
+        return clientService.sndClientMsg(newClient).toString();
     }
 
     @PutMapping("/edit-else-new-client")
-    Client editElseNew(@RequestBody ClientMsg client) {
-        return clientService.sndClientMsg(client);
+    String editElseNew(@RequestBody ClientMsg client) {
+        return clientService.sndClientMsg(client).toString();
     }
 }

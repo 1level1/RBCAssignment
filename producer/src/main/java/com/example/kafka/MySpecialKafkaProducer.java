@@ -1,16 +1,16 @@
 package com.example.kafka;
 import com.example.Address;
 import com.example.Client;
-import com.example.ProducerApplication;
 import com.example.msgfacades.ClientMsg;
 import org.apache.kafka.clients.producer.*;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.Properties;
 
 public class MySpecialKafkaProducer /* not so special ;-) */ implements IKafkaProducer {
 
-    final static Logger logger = Logger.getLogger(ProducerApplication.class);
+    final static Logger logger = LogManager.getLogger(MySpecialKafkaProducer.class);
 
     private Producer<String, Client> producer;
     private String topic;

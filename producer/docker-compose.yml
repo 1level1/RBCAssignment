@@ -1,15 +1,28 @@
 version: '2'
 services:
-#  producer:
-#    image: producer:0.0.1-SNAPSHOT
-#    hostname: producer
-#    container_name: producer
-#    ports:
-#      - "8090:8090"
-#    depends_on:
-#      - zookeeper
-#      - broker
-#      - schema-registry
+  consumer:
+    image: kafka-consumer-example:1.1
+    hostname: consumer
+    container_name: consumer
+    ports:
+      - "8099:8099"
+    depends_on:
+      - zookeeper
+      - broker
+      - schema-registry
+      - producer
+
+  producer:
+    image: kafka-producer-example:1.1
+    hostname: producer
+    container_name: producer
+    ports:
+      - "8090:8090"
+    depends_on:
+      - zookeeper
+      - broker
+      - schema-registry
+
 
 
   zookeeper:
