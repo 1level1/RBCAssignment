@@ -8,7 +8,7 @@ Build an asynchronized data integration with Spring Boot, Kafka and a database
 ## Asumptions:
   1. The Client to Address is a many to one relation. Meaning every client has only one address.
   2. When trying to edit a non existing client, will create a new client and address if does not exists.
-  3. Editing an existing client with some change in the address fields will result in creating a new address and assigning it to user.
+  3. Editing an existing client with some change in the address fields will result in creating a new address and assigning it to client.
   4. Adding a new client, with address already exists (compared by all fields) will assign that address to client.
 
 ## Build:
@@ -31,7 +31,7 @@ Build an asynchronized data integration with Spring Boot, Kafka and a database
   1. POST on localhost:8090/add-new-client
   2. PUT on localhost:8090/edit-else-new-client
   
-  Although both of them will do the same - create user and update used if a request with same id is called (As mentioned in the assumptions).
+  Although both of them will do the same - create client and update used if a request with same id is called (As mentioned in the assumptions).
   
   A sent msg body must have the following json structure:
   ```json
