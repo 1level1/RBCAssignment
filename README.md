@@ -4,6 +4,8 @@ Build an asynchronized data integration with Spring Boot, Kafka and a database
 ## Requirements:
 1. docker
 2. docker-compose
+3. openjdk version "1.8.0_275"
+4. Gradle 6.7.1
 
 ## Asumptions:
   1. The Client to Address is a many to one relation. Meaning every client has only one address.
