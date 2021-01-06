@@ -36,14 +36,14 @@ Build an asynchronized data integration with Spring Boot, Kafka and a database
   A sent msg body must have the following json structure:
   ```json
   {
-        "addressline" : "addressline",
-        "city": "city",
-        "state": "state",
-        "postcode": "postcode",
+        "addressline" : "some address",
+        "city": "some city",
+        "state": "some state",
+        "postcode": "some postcode",
         "id": "id",
-        "firstname": "firstname",
+        "firstname": "some firstname",
         "networth": 100.0,
-        "lastname": "lastname"
+        "lastname": "some lastname"
   }
   ```
   2. For integration tests and playing with the system, postman (https://www.postman.com/) is very usefull (locally).
