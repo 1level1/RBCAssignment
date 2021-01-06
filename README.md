@@ -9,13 +9,22 @@ Build an asynchronized data integration with Spring Boot, Kafka and a database
   1. The Address to Client is a one to many relation. Meaning one address can have several clients, but every client has only one address.
   2. When editing a user, will create a new user and address if does not exists.
 
+## Build:
+  For convinience, there is a buildMe.sh script at the root dir
+  
+  Usage instructions are:
+  * cd <rootdir>
+  * source buildMe.sh
+ 
 ## Usage
 ### Producer
 1. The producer has 2 API`s:
-  1. localhost:8090/add-new-client
-  2. localhost:8090/edit-else-new-client
+  1. POST on localhost:8090/add-new-client
+  2. PUT on localhost:8090/edit-else-new-client
   
-  Where an example for sent body is the following json:
+  (Although both of them will do the same, as mentioned in the assumption section)
+  
+  A sent msg body must have the following json structure:
   ```json
   {
         "addressline" : "addressline",
@@ -33,4 +42,6 @@ Build an asynchronized data integration with Spring Boot, Kafka and a database
   To implement such a feedback, using a framework for DDD with CQRS, such as Axon, and Kafka as the event store, would have provided a better stack.
 
 ### Consumer
-1. Consumer has 2 tables, addresses and clients, as seen in the following image:
+1. Consumer has 2 tables, addresses and clients, as can be seen in the image bellow
+2. Consumer database is h2, an easy connect msg is 
+![alt text](https://github.com/1level1/RBCAssignment/blob/main/consumerTables.png?raw=true)
