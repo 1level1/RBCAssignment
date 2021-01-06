@@ -7,7 +7,7 @@ Build an asynchronized data integration with Spring Boot, Kafka and a database
 
 ## Asumptions:
   1. The Client to Address is a many to one relation. Meaning every client has only one address.
-  2. When editing a user, will create a new user and address if does not exists.
+  2. When trying to edit a non existing client, will create a new client and address if does not exists.
   3. Editing an existing client with some change in the address fields will result in creating a new address and assigning it to user.
   4. Adding a new client, with address already exists (compared by all fields) will assign that address to client.
 
