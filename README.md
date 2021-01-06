@@ -46,7 +46,7 @@ Build an asynchronized data integration with Spring Boot, Kafka and a database
         "lastname": "some lastname"
   }
   ```
-  2. For integration tests and playing with the system, postman (https://www.postman.com/) is very usefull (locally).
+  2. For integration tests and playing with the system, I used postman (https://www.postman.com/).
   3. There is no feedback from the consumer to the producer if such client already exists in the db, and it is the consumer responsibility to check if exists. If exists will update the records, otherwise will create a new Address and Client records.
   
   To implement such a feedback, using a framework for DDD with CQRS, such as Axon, and Kafka as the event store, would have provided a better stack.
