@@ -15,7 +15,7 @@ Build an asynchronized data integration with Spring Boot, Kafka and a database
   For convinience, there is a buildMe.sh script at the root dir
   
   Usage instructions are:
-  * cd <rootdir>
+  * cd *rootdir*
   * source buildMe.sh
   
   This will compile, build dockers for consumer and producer and run docker-compose for the system:
