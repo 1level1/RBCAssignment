@@ -15,6 +15,12 @@ Build an asynchronized data integration with Spring Boot, Kafka and a database
   Usage instructions are:
   * cd <rootdir>
   * source buildMe.sh
+  This will compile, build dockers for consumer and producer and run docker-compose for the system:
+  1. consumer
+  2. producer
+  3. kafka
+  4. zookeeper
+  5. schema-registry
  
 ## Usage
 ### Producer
