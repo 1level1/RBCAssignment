@@ -31,7 +31,7 @@ Build an asynchronized data integration with Spring Boot, Kafka and a database
   * POST on localhost:8090/add-new-client
   * PUT on localhost:8090/edit-else-new-client
   
-  Although both of them will do the same - create client and update used if a request with same id is called (As mentioned in the assumptions).
+  Although both of them will do the same - create client or update client if a request with same id is called (As mentioned in the assumptions).
   
   A sent msg body must have the following json structure:
   ```json
