@@ -33,3 +33,4 @@ Build an asynchronized data integration with Spring Boot, Kafka and a database
   To implement such a feedback, using a framework for DDD with CQRS, such as Axon, and Kafka as the event store, would have provided a better stack.
 
 ### Consumer
+1. Consumer has 2 tables, addresses and clients, as seen in the following image:
