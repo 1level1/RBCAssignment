@@ -61,3 +61,9 @@ Build an asynchronized data integration with Spring Boot, Kafka and a database
 
 
 ![alt text](https://github.com/1level1/RBCAssignment/blob/main/consumerTables.png?raw=true)
+
+## Testing
+1. Added kafka testing for producer.
+2. Added JPA write testing for consumer (data is writen from service to db).
+3. Added test coverage (https://www.baeldung.com/jacoco) to build for producer and consumer.
+
