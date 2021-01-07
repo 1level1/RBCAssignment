@@ -4,6 +4,8 @@ plugins {
 	id 'com.github.johnrengelman.shadow' version '6.1.0'
 	id 'java'
 	id "com.commercehub.gradle.plugin.avro" version "0.22.0"
+	id 'idea'
+	id 'jacoco'
 }
 
 group = 'com.example'
@@ -32,7 +34,8 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.kafka:spring-kafka'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-	runtimeOnly 'com.h2database:h2'
+    implementation 'junit:junit:4.12'
+    runtimeOnly 'com.h2database:h2'
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
@@ -44,10 +47,20 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.kafka:spring-kafka-test'
 }
+jacoco {
+	toolVersion = "0.8.5"
+	reportsDir = file("$buildDir/jacoco")
+}
 
 test {
 	useJUnitPlatform()
+	finalizedBy jacocoTestReport
 }
+
+jacocoTestReport {
+	dependsOn test
+}
+
 jar {
 	manifest {
 		attributes 'Main-Class': 'com.example.consumer.ConsumerApplication'
